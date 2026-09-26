@@ -1,0 +1,14 @@
+[package]
+name = "defmt-nop"
+version = "0.1.0"
+edition = "2024"
+author = "shimun <shimun@shmnun.net>"
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+description = "A logging backend for defmt that does nothing but does provide the linker symbols required by defmt, avoiding the linker error"
+keywords = ["logging"]
+categories = ["no-std", "no-std::no-alloc", "development-tools::build-utils"]
+repository = "https://github.com/shimunn/defmt-nop"
+
+[dependencies]
+defmt = { version = "1.1", default-features = false }
