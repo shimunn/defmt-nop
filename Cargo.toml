@@ -1,0 +1,10 @@
+[package]
+name = "defmt-nop"
+version = "0.1.0"
+edition = "2024"
+author = "shimun <shimun@shmnun.net>"
+categories = ["no-std", "no-std::no-alloc", "development-tools::build-utils"]
+repository = "https://github.com/shimunn/defmt-nop"
+
+[dependencies]
+defmt = { version = "1.1", default-features = false }
