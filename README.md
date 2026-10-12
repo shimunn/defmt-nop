@@ -26,7 +26,7 @@ You can do just this:
 
 `Cargo.toml`:
 ```toml
-[build-dependencies]
+[dev-dependencies]
 defmt-nop = "0.1.0"
 ```
 This approach also has the benefit that your defmt invocations are type checked during testing and not only when you build your final application with the `defmt` feature enabled
