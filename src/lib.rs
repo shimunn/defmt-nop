@@ -1,6 +1,8 @@
 #![doc = include_str!("../README.md")]
 
-use defmt::{global_logger, timestamp};
+use defmt::{global_logger};
+#[cfg(feature = "timestamp")]
+use defmt::{ timestamp};
 /// A logging backend for defmt that does nothing but does provide the linker symbols required by
 /// # Usage
 /// ```rust
@@ -9,6 +11,7 @@ use defmt::{global_logger, timestamp};
 #[global_logger]
 struct NopLogger;
 
+#[cfg(feature = "timestamp")]
 timestamp!("");
 
 unsafe impl defmt::Logger for NopLogger {

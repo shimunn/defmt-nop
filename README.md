@@ -38,3 +38,9 @@ use defmt_nop as _;
 ```
 
 once somewhere in your lib
+
+# Troubleshooting
+
+##  __DEFMT_MARKER_TIMESTAMP_WAS_DEFINED
+
+If you hit an linker error containing this marker you might be using the `timestamp` feature in conjunction with an other crate such as `embassy-time` with `defmt-timestamp-uptime` enabled -> don't use the `timestamp` feature
